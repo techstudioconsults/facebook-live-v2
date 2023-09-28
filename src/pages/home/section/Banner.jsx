@@ -9,33 +9,30 @@ const Banner = () => {
       >
         <Box
           w={{ lg: `75.6875rem` }}
-          h={{ lg: `26.375rem` }}
+          h={{base:`19rem`, lg: `26.375rem` }}
           bgColor={`blue.300`}
           borderRadius={`1.25rem`}
-          // display={`flex`}
-          // justifyContent={`center`}
-          // alignItems={`center`}
-          // m={`0 auto`}
-          pl={{ lg: `8.19rem` }}
-          pr={{ lg: `8.12rem` }}
+          
+          pl={{base:`2rem`, lg: `8.19rem` }}
+          pr={{base:`1.9rem`, lg: `8.12rem` }}
         >
           <Heading
             color={`#fff`}
-            fontSize={{ lg: `2.0625rem` }}
+            fontSize={{base:`.875rem`, lg: `2.0625rem` }}
             textAlign={`center`}
             fontWeight={600}
-            pt={{ lg: `4.38rem` }}
+            pt={{base:`2rem`, lg: `4.38rem` }}
           >
             Are you ready to unlock the world of web development and embark on
             an exciting journey towards becoming a Frontend Developer?
           </Heading>
           <Text
-            fontSize={{ lg: `1.0625rem` }}
+            fontSize={{base:`.875rem`, lg: `1.0625rem` }}
             color={`#fff`}
             w={{ lg: `50.375rem` }}
             textAlign={`center`}
             mx={{ lg: `3rem` }}
-            lineHeight={{ lg: `1.941rem` }}
+            lineHeight={{base:`1.5rem`, lg: `1.941rem` }}
             mt={`1.12rem`}
             fontWeight={400}
           >
@@ -44,8 +41,9 @@ const Banner = () => {
             landing pages.
           </Text>
           <Button
-            w={{ lg: `16.1875rem` }}
-            h={{ lg: `2.4375rem` }}
+          fontSize={{base:`.875rem`, lg:`1rem`}}
+            w={{base:`15rem`, lg: `16.1875rem` }}
+            h={{base:`2rem`, lg: `2.4375rem` }}
             bgColor={`blue.100`}
             border={`none`}
             borderRadius={`.375rem`}
@@ -54,7 +52,7 @@ const Banner = () => {
             alignItems={`center`}
             margin={`0 auto`}
             color={`white`}
-            mt={{ lg: `2.31rem` }}
+            mt={{base:`1.5rem`, lg: `2.31rem` }}
           >
             Begin Registration Now
           </Button>

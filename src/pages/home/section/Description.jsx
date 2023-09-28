@@ -22,7 +22,7 @@ const Description = () => {
         />
       </Box>
 
-      <Box bgColor={`#DCE9FA`}>
+      <Box bgColor={`#DCE9FA`} className="HTML">
         <Card
           img={orange_ellipse}
           left={`-1rem`}

@@ -61,17 +61,17 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
     <Box>
       <Flex
         justify={`space-between`}
-        align={`center`}
+        align={{base:`start`, lg:`center`}}
         // border={`1px solid red`}
         // width={`100%`}
       >
         <Box>
           <Text
             onClick={toggleItem}
-            fontSize={{ lg: `1.6875rem` }}
+            fontSize={{ base: `.875rem`, lg: `1.6875rem` }}
             lineHeight={{ lg: ` 3.005rem` }}
             color={`#1E1E1E`}
-            mb={{ lg: `2rem` }}
+            mb={{base:`1rem`, lg: `2rem` }}
             style={{ cursor: "pointer" }}
           >
             {title}
@@ -80,7 +80,7 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
 
         <Box onClick={toggleItem}>
           {isOpen ? (
-            <Icon icon="fe:arrow-down" width="30" height="30" />
+            <Icon icon="fe:arrow-down" width="20" height="20" />
           ) : (
             <Icon icon="fe:arrow-up" width="30" height="30" />
           )}
@@ -91,13 +91,24 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
       {isOpen && (
         <Box>
           {typeof content === "string" ? (
-            <Text mt={{lg: `-1.5rem`}} mb={{lg:`.5rem`}} w={{lg:`800px`}}>{content}</Text>
+            <Text
+            fontSize={{base:`.875rem`}}
+              mt={{base:`-1rem`, lg: `-1.5rem` }}
+              mb={{ base: `.5rem` }}
+              w={{base:`280px`, lg: `800px` }}
+             
+            >
+              {content}
+            </Text>
           ) : (
-            <ul style={{listStyle:`none`, marginTop:`-1.5rem`}}>
+            <Box as={`ul`}  fontSize={{base:`.75rem`}}
+           
+            
+            style={{ listStyle: `none`, marginTop: `-1.5rem` }}>
               {Object.values(content).map((value, index) => (
-                <li key={index}>{value}</li>
+                <Box as={`li`} mt={{base:`.5rem`}} key={index}>{value}</Box>
               ))}
-            </ul>
+            </Box>
           )}
         </Box>
       )}
@@ -110,9 +121,10 @@ const Faqs = () => {
   return (
     <Box className="cc-container">
       <Heading
+        fontSize={{ base: `1rem` }}
         textAlign={`center`}
-        mb={{ lg: `4.31rem` }}
-        mt={{ lg: `8.8rem` }}
+        mb={{ base: `2rem`, lg: `4.31rem` }}
+        mt={{ base: `4rem`, lg: `8.8rem` }}
       >
         Web Development FAQs
       </Heading>

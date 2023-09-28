@@ -105,6 +105,7 @@ const Register = () => {
           h={{ lg: `44rem` }}
           w={{ lg: `46.375rem` }}
           objectFit={`cover`}
+          display={{ base: `none`, lg: `block` }}
         />
       </Box>
 
@@ -116,8 +117,8 @@ const Register = () => {
         m={`0 auto`}
       >
         <Box
-          w={{ lg: `37.125rem` }}
-          h={{ lg: `35rem` }}
+          w={{ base: `360px`, lg: `37.125rem` }}
+          h={{base:`43rem`, lg: `35rem` }}
           boxShadow={`2px 2px 10px 2px rgba(0, 0, 0, 0.10)`}
           backgroundColor={`#fff`}
           display={`flex`}
@@ -125,27 +126,32 @@ const Register = () => {
           justifyContent={`center`}
           alignItems={`flexStart`}
           m={`0 auto`}
-          pl={{ lg: `3.06rem` }}
-          pt={{ lg: `3.69rem` }}
+          pl={{ base: `2rem`, lg: `3.06rem` }}
+          pt={{ base: `2rem`, lg: `3.69rem` }}
         >
           <Heading
-            fontSize={{ lg: `1.5rem` }}
+            fontSize={{ base: `1rem`, lg: `1.5rem` }}
             fontWeight={600}
-            mt={{ lg: `-4rem` }}
+            mt={{ base: `-4.5rem`, lg: `-4rem` }}
             textAlign={`start`}
             mb={{ lg: `1.06rem` }}
           >
             One last step, let’s get to know you
           </Heading>
           <Text
-            fontSize={{ lg: `.9375rem` }}
-            lineHeight={{ lg: `1.5rem` }}
-            mb={{ lg: `3.88rem` }}
+            fontSize={{ base: `.875rem`, lg: `.9375rem` }}
+            lineHeight={{ base: `1rem`, lg: `1.5rem` }}
+            mb={{ base: `2rem`, lg: `3.88rem` }}
           >
             Fill in your details to get started.
           </Text>
           <FormControl onSubmit={handleSubmit(handleSubmitForm)} as={`form`}>
-            <Flex justify={`flex-start`} align={`center`} gap={`2rem`}>
+            <Flex
+              flexDir={{ base: `column`, lg: `row` }}
+              justify={`flex-start`}
+              align={{ base: `start`, lg: `center` }}
+              gap={{lg:`2rem`}}
+            >
               <Box>
                 <FormLabel
                   fontSize={{ lg: `.875rem` }}
@@ -174,8 +180,9 @@ const Register = () => {
                     },
                   })}
                   placeholder="First Name"
-                  w={{ lg: `14.5625rem` }}
-                  h={{ lg: `2.5625rem` }}
+                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  h={{ base: `2.5625rem` }}
+                  
                 />
 
                 <span
@@ -219,8 +226,8 @@ const Register = () => {
                     },
                   })}
                   placeholder="Last Name"
-                  w={{ lg: `14.5625rem` }}
-                  h={{ lg: `2.5625rem` }}
+                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  h={{ base: `2.5625rem` }}
                 />
                 <span
                   style={{
@@ -236,11 +243,16 @@ const Register = () => {
               </Box>
             </Flex>
 
-            <Flex justify={`flex-start`} align={`center`} gap={`1.94rem`}>
+            <Flex
+              flexDir={{ base: `column`, lg: `row` }}
+              justify={`flex-start`}
+              align={{ base: `start`, lg: `center` }}
+              gap={{lg:`1.94rem`}}
+            >
               <Box>
                 <FormLabel
-                  fontSize={{ lg: `.875rem` }}
-                  lineHeight={{ lg: `1.375rem` }}
+                  fontSize={{ base: `.875rem` }}
+                  lineHeight={{ base: `1.375rem` }}
                   fontWeight={600}
                   // mb={{ lg: `.5rem` }}
                   color={`#3E3E3E`}
@@ -259,8 +271,8 @@ const Register = () => {
                     },
                   })}
                   placeholder="User type"
-                  w={{ lg: `14.5625rem` }}
-                  h={{ lg: `2.5625rem` }}
+                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  h={{ base: `2.5625rem` }}
                 />
 
                 <span
@@ -298,8 +310,8 @@ const Register = () => {
                     },
                   })}
                   placeholder="name@example.com"
-                  w={{ lg: `14.5625rem` }}
-                  h={{ lg: `2.5625rem` }}
+                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  h={{ base: `2.5625rem` }}
                 />
                 <span
                   style={{
@@ -314,8 +326,6 @@ const Register = () => {
                 </span>
               </Box>
             </Flex>
-
-
 
             {/* <Flex justify={`flex-start`} align={`center`} gap={`1.94rem`}>
               <Box   mt={{ lg: `-1rem` }}>
@@ -394,17 +404,26 @@ const Register = () => {
               </Box>
             </Flex> */}
 
-            <Box>
+            <Box
+           
+           
+            >
               <Checkbox
                 type="checkbox"
                 {...register("checkbox", {
                   required: "Checkbox section is required",
                   // message: "Checkbox section is required",
                 })}
-                fontSize={{ lg: `.875rem` }}
-                lineHeight={{ lg: `1.375rem` }}
-                fontWeight={600}
-                color={`#3E3E3E`}
+
+                // fontSize={{base:`.5rem`, lg: `.75rem` }}
+                // lineHeight={{ lg: `1.375rem` }}
+                // fontWeight={600}
+                // color={`yellow`}
+                fontSize={`.5rem`}
+                className="checkbox"
+
+                
+                
               >
                 Send me alerts and weekly newletters
               </Checkbox>
@@ -422,8 +441,9 @@ const Register = () => {
             </Box>
 
             <Button
-              w={{ lg: `31rem` }}
-              h={{ lg: `2.625rem` }}
+              w={{base:`17rem`, lg: `31rem` }}
+              h={{ base: `2.625rem` }}
+              
               bgColor={`blue.100`}
               color={`#fff`}
               display={`flex`}
@@ -448,7 +468,8 @@ const Register = () => {
           align={`center`}
           gap={{ lg: `2rem` }}
           justify={`space-between`}
-          mt={{ lg: `1.94rem` }}
+          mt={{base:`2.5rem`, lg: `1.94rem` }}
+          mb={{base:`2rem`}}
           className="cc-container"
         >
           <Link to={"/"}>

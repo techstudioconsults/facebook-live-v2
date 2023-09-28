@@ -4,6 +4,7 @@ import React from "react";
 const CourseBanner = () => {
   return (
     <Box
+    display={{base:`none`, lg:`block`}}
       w={{ lg: `67.75rem` }}
       h={{ lg: `9.64135rem` }}
       m={`0 auto`}

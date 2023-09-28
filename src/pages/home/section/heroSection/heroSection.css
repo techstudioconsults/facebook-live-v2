@@ -128,6 +128,10 @@
 }
 
 @media screen and (max-width: 400px) {
+.hero_section {
+  padding-top: 18rem;
+}
+
   .hero_section-content {
     flex-direction: column;
     justify-content: center;
@@ -147,6 +151,7 @@
   .hero_section-header h2 {
     font-size: 1.5rem;
     margin-right: 2rem;
+    margin-bottom: 1rem;
    
   }
 
@@ -174,8 +179,10 @@
 
   .form-control p {
     font-size: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
     width: 300px;
+    border: 1px solid red;
+    /* white-space: nowrap; */
     
     
    
@@ -199,12 +206,7 @@
     width: 19.5rem;
     height: 2.1875rem;
     
-    font-size: 1rem;
-    
-    line-height: 1.47419rem;
-    padding: 0.84375rem 6.5rem;
-    
-    gap: 0.625rem;
+    margin-top: 1.31rem;
    
    
   }
