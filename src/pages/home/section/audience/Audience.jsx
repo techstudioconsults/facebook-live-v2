@@ -1,5 +1,5 @@
 import React from "react";
-import "./Audience.css"; // Import the CSS file with the correct casing
+import "./audience.css"; // Import the CSS file with the correct casing
 
 const Audience = () => {
   return (
