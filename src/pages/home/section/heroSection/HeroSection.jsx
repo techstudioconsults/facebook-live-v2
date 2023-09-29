@@ -11,12 +11,13 @@ const HeroSection = () => {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
 
-  const baseUrl = "https://api.techstudio.academy/api/v1/facebookAd";
+  const baseUrl = "https://express.techstudio.academy/api/v1/facebookAd";
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const handleSubmitForm = async (data) => {
@@ -26,7 +27,7 @@ const HeroSection = () => {
       const res = await axios.post(baseUrl, data);
       console.log(res);
 
-      if (res.status === 200) {
+      if (res.status === 201) {
         setIsSuccessModalOpen(true);
       } else {
         setIsErrorModalOpen(true);

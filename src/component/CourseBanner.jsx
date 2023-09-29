@@ -13,7 +13,7 @@ const CourseBanner = () => {
       borderRadius={`.52113rem`}
       boxShadow={`0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3.12692px 7.29615px 0px rgba(0, 0, 0, 0.10), 0px 13.55px 13.55px 0px rgba(0, 0, 0, 0.09), 0px 30.22692px 17.71923px 0px rgba(0, 0, 0, 0.05), 0px 53.15769px 20.84615px 0px rgba(0, 0, 0, 0.01), 0px 83.38461px 22.93077px 0px rgba(0, 0, 0, 0.00)`}
       className="cc-container"
-      mt={{base:`6rem`, lg: `4.19rem` }}
+      mt={{base:`2rem`, lg: `4.19rem` }}
      
     >
       <Flex justify={{base:`center`, lg:`flex-start`}} align={{base:`flex-start`, lg:`flex-start`}}>

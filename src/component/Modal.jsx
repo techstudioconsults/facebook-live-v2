@@ -42,8 +42,18 @@ const RegistrationModal = ({ isOpen, onClose, isSuccess, isError }) => {
            
             >
               <Image src="https://res.cloudinary.com/dkszgtapy/image/upload/v1695836148/success_mbzuy1.png" />
-              <Heading>Your registration was successful!!.</Heading>
-              <Text>
+              <Heading
+              fontSize={{base:`1rem`, lg:`1.5rem`}}
+              fontWeight={700}
+              mt={{base:`2rem`, lg:`2.93rem`}}
+              mb={{base:`1rem`, lg:`.81rem`}}
+              >Your registration was successful!!.</Heading>
+              <Text
+              fontSize={{base:`.875rem`, lg:`1rem`}}
+              textAlign={`center`}
+              lineHeight={{base:`1.5rem`, lg:`1.80681rem`}}
+              
+              >
                 Your details have been received and our Customer Care
                 Representative will contact you shortly.
               </Text>

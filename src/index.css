@@ -53,8 +53,14 @@ h3 {
   color: #0266F4;
 }
 
+
 .html p {
   color: #1E1E1E;
+}
+.capstone p,
+.capstone span,
+.capstone h2 {
+  color: #fff;
 }
 
 /* .git span {

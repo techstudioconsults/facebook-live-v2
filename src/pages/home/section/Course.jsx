@@ -20,7 +20,7 @@ const Course = () => {
       pb={{base:`3rem`, lg: `4.32rem` }}
     >
       <Box className="cc-container">
-        <Heading as={`h2`} textAlign={`center`} pt={{base:`2rem`, lg: `4.34rem` }} fontSize={{base:`1rem`}}>
+        <Heading as={`h2`} textAlign={`center`} pt={{base:`2rem`, lg: `4.34rem` }} fontSize={{base:`1rem`, lg:`2.25rem`}}>
           Why Choose This Course
         </Heading>
 

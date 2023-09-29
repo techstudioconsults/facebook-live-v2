@@ -1,7 +1,5 @@
 import {
   Box,
-  Button,
-  Flex,
   Grid,
   GridItem,
   Heading,
@@ -9,7 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 import vscode from "../assets/icons/vscode.png"
 const Card = (props) => {
   return (
@@ -33,13 +31,14 @@ const Card = (props) => {
           </GridItem>
 
           <GridItem>
-            <Text as={`span`}>{props.caption}</Text>
+            <Text as={`span`} fontWeight={700}>{props.caption}</Text>
             <Heading
-              fontSize={{ base: `.875rem`, lg: `2.0625rem` }}
+              fontSize={{ base: `1.2rem`, lg: `2.0625rem` }}
               fontWeight={700}
               lineHeight={{lg:`2.5075rem`}}
               letterSpacing={`.00625rem`}
               mt={{ base: `1rem` }}
+              whiteSpace={`nowrap`}
             >
               {props.heading}
              </Heading>
@@ -66,10 +65,10 @@ const Card = (props) => {
               }}
               gap={`1rem`}
             >
-              <Button
+              <Box
                 display={`flex`}
                 alignItems={`center`}
-                fontSize={{ base: `.75rem`, lg: `1rem` }}
+                fontSize={{ base: `.75rem`, lg: `.9375rem` }}
                 justifyContent={`flex-start`}
                 gap={{ base: `1rem`, lg: `1rem` }}
                 w={{ base: `12rem`, lg: ` 14.86438rem` }}
@@ -80,16 +79,17 @@ const Card = (props) => {
                 bgColor={props.bgColor}
                 color={props.color}
                 _hover={`none`}
+              lineHeight={{lg:` 1.5rem`}}
               >
                 <Image src={vscode}
                   
-                  w={{ base: `30px`, lg: `70px` }}
-                  h={{ base: `30px`, lg: `70px` }}
+                  w={{ base: `30px`, lg: `3rem` }}
+                  h={{ base: `30px`, lg: `3rem` }}
                 />
                 Visual Studio Code
-              </Button>
+              </Box>
 
-              <Button
+              <Box
                 display={props.display}
                 alignItems={`center`}
                 fontSize={{ base: `.75rem`, lg: `1rem` }}
@@ -104,20 +104,18 @@ const Card = (props) => {
                 color={props.color}
                 _hover={`none`}
               >
-                <Box
-                  as={Icon}
-                  icon={props.icon}
-                  w={{ base: `30px`, lg: `35.36px` }}
-                  h={{ base: `30px`, lg: `49.98px` }}
+                <Image src={props.icon}
+                 w={props.imageWidth}
+                 h={props.imageHeight}
                 />
                 {props.btn}
-              </Button>
+              </Box>
 
-              <Button
+              <Box
                 display={props.display1}
                 alignItems={`center`}
                 fontSize={{ base: `.75rem`, lg: `1rem` }}
-                justifyContent={`flex`}
+                justifyContent={`flex-start`}
                 gap={`1rem`}
                 w={props.width1}
                 h={props.height1}
@@ -132,14 +130,12 @@ const Card = (props) => {
                 _hover={`none`}
                 // border={`1px solid red`}
               >
-                <Box
-                  as={Icon}
-                  icon={props.icon1}
+                <Image src={props.icon1}
                   w={{ base: `30px`, lg: `49px` }}
                   h={{ base: `30px`, lg: `49px` }}
                 />
                 {props.button}
-              </Button>
+              </Box>
             </Box>
             {/* </Box> */}
           </GridItem>

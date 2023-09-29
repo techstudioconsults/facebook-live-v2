@@ -30,7 +30,7 @@ const Register = () => {
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
   // const toast = useToast({ position: `top` });
 
-  const baseUrl = "https://api.techstudio.academy/api/v1/facebookAd";
+  const baseUrl = "https://express.techstudio.academy/api/v1/facebookAd";
 
   const {
     register,
@@ -45,7 +45,7 @@ const Register = () => {
       const res = await axios.post(baseUrl, data);
       console.log(res);
 
-      if (res.status === 200) {
+      if (res.status === 201) {
         setIsSuccessModalOpen(true);
       } else {
         setIsErrorModalOpen(true);
@@ -316,10 +316,10 @@ const Register = () => {
             <Box>
               <Checkbox
                 type="checkbox"
-                {...register("checkbox", {
-                  required: "Checkbox section is required",
-                  // message: "Checkbox section is required",
-                })}
+                // {...register("checkbox", {
+                //   required: "Checkbox section is required",
+                //   // message: "Checkbox section is required",
+                // })}
                 className="checkbox"
                 whiteSpace={`nowrap`}
               >
