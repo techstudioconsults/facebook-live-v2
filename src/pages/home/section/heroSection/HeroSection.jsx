@@ -60,6 +60,9 @@ const HeroSection = () => {
         </div>
 
         <div className="form-control">
+          <div className="before">
+
+          </div>
           <form onSubmit={handleSubmit(handleSubmitForm)}>
             <p>
               Register to learn more about the program pricing and curriculum

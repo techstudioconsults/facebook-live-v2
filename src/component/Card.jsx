@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Icon } from "@iconify/react";
+import vscode from "../assets/icons/vscode.png"
 const Card = (props) => {
   return (
     <Box>
@@ -20,7 +21,7 @@ const Card = (props) => {
           alignItems={`center`}
           pos={`relative`}
           gap={{ base: `2rem`, lg: `3.06rem` }}
-          className={` cc-container ${props.className}`}
+          className={props.className}
         >
           <GridItem display={{ base: `none`, lg: `block` }}>
             <Image
@@ -43,7 +44,7 @@ const Card = (props) => {
               {props.heading}
              </Heading>
              <GridItem display={{base:`block`, lg:`none`}}>
-            <Image src={props.image} className="cc-container"/>
+            <Image src={props.image} />
           </GridItem> 
             <Text
               fontSize={{ base: `.75rem`, lg: `.875rem` }}
@@ -80,9 +81,8 @@ const Card = (props) => {
                 color={props.color}
                 _hover={`none`}
               >
-                <Box
-                  as={Icon}
-                  icon="skill-icons:vscode-light"
+                <Image src={vscode}
+                  
                   w={{ base: `30px`, lg: `70px` }}
                   h={{ base: `30px`, lg: `70px` }}
                 />

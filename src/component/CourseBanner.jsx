@@ -72,7 +72,7 @@ const CourseBanner = () => {
           </Text>
         </Box>
 
-        <Box>
+        <Box display={{base:`block`, lg:`block`}} justifyContent={{base:`center`, lg:`none`}} m={{base:`0 auto`, lg:`0`}}>
           <Heading
             
             color={`blue.200`}

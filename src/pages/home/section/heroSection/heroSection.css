@@ -44,7 +44,22 @@
   align-items: flex-start;
   border-radius: 0.9375rem;
   background: #fff;
+  margin-right: 5rem;
+  /* position: relative;
+  z-index: 1000; */
  
+}
+
+.before::before {
+  content: "";
+    width: 24.5625rem;
+    height: 350px;
+    background-color: hsl(214, 85%, 19%);
+    position: absolute;
+    top: 12rem;
+    right: 6.5rem;
+    border-radius: 8px;
+    z-index: -1
 }
 
 
