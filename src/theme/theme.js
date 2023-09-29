@@ -5,8 +5,7 @@ const theme = extendTheme({
     transparent: 'transparent',
     black: '#1E1E1E',
     white: '#fff',
-    deep_blue: `#1f2666`,
-
+    
      blue: {
         100:`#007BFF`,
         200: `#1358DB`,
@@ -14,26 +13,7 @@ const theme = extendTheme({
         // 400:`#1f2666`,
      },
 
-    purple: {
-      100: '#F7F2FB',
-      200: '#6D5DD3',
-      300: '#0E0A2D',
-    },
-    yellow: {
-      100: '#FBE69A',
-      200: '#F6C21C',
-      300: '#39341F',
-    },
-    coral: {
-      100: '#AEDEE0',
-      200: '#17B6BA',
-      300: '#1E2323',
-    },
-    green: {
-      100: '#C9E7D3',
-      200: '#11923D',
-      300: '#161D18',
-    },
+   
     grey: {
       100: '#FAFAFA',
       200: '#F3F3F3',
@@ -62,15 +42,6 @@ const theme = extendTheme({
     heading: "Open Sans,   sans-serif",
     body: "Open Sans,   sans-serif",
   },
-  // textStyles: {
-  //   h1: {
-  //     // you can also use responsive styles
-  //     // fontSize: ['48px', '72px'],
-  //     fontSize: '64px',
-  //     lineHeight: '72px',
-  //     fontWeight: 'bold',
-  //   },
-  // },
   fontSizes: {
     xs: '0.75rem',
     sm: '0.875rem',

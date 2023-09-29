@@ -17,7 +17,7 @@ const Course = () => {
       as="section"
       bgColor={`rgba(220, 233, 250, 0.30)`}
       mt={{ lg: `8.86rem` }}
-      pb={{ lg: `4.32rem` }}
+      pb={{base:`3rem`, lg: `4.32rem` }}
     >
       <Box className="cc-container">
         <Heading as={`h2`} textAlign={`center`} pt={{base:`2rem`, lg: `4.34rem` }} fontSize={{base:`1rem`}}>

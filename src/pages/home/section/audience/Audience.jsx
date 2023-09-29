@@ -3,10 +3,10 @@ import "./audience.css"; // Import the CSS file with the correct casing
 
 const Audience = () => {
   return (
-    <section className="audience-section"> {/* Renamed className for consistency */}
+    <section className="audience-section"> 
       <h2>Our Target Audience</h2>
 
-      <div className="audience-container cc-container"> {/* Renamed className for consistency */}
+      <div className="audience-container cc-container"> 
         {/* Audience Card 1 */}
         <div className="audience-card">
           <img

@@ -98,7 +98,7 @@ const Register = () => {
   //   };
 
   return (
-    <Flex justify={`space-between`} align={`center`}>
+    <Flex justify={`space-between`} align={`center`} m={`0 auto`}>
       <Box>
         <Image
           src="https://res.cloudinary.com/dkszgtapy/image/upload/v1686218517/techstudio-web-app/assets/images/authImg_uy00im.webp"
@@ -118,7 +118,7 @@ const Register = () => {
       >
         <Box
           w={{ base: `360px`, lg: `37.125rem` }}
-          h={{base:`43rem`, lg: `35rem` }}
+          h={`auto`}
           boxShadow={`2px 2px 10px 2px rgba(0, 0, 0, 0.10)`}
           backgroundColor={`#fff`}
           display={`flex`}
@@ -126,15 +126,14 @@ const Register = () => {
           justifyContent={`center`}
           alignItems={`flexStart`}
           m={`0 auto`}
-          pl={{ base: `2rem`, lg: `3.06rem` }}
-          pt={{ base: `2rem`, lg: `3.69rem` }}
+          mt={{ lg: `2rem` }}
+          p={{ base: `2rem`, lg: `3.69rem 3.06rem 3.62rem 3.06rem` }}
         >
           <Heading
             fontSize={{ base: `1rem`, lg: `1.5rem` }}
             fontWeight={600}
-            mt={{ base: `-4.5rem`, lg: `-4rem` }}
             textAlign={`start`}
-            mb={{ lg: `1.06rem` }}
+            mb={`1.06rem`}
           >
             One last step, let’s get to know you
           </Heading>
@@ -150,7 +149,7 @@ const Register = () => {
               flexDir={{ base: `column`, lg: `row` }}
               justify={`flex-start`}
               align={{ base: `start`, lg: `center` }}
-              gap={{lg:`2rem`}}
+              gap={{ lg: `2rem` }}
             >
               <Box>
                 <FormLabel
@@ -170,19 +169,12 @@ const Register = () => {
                     required: "First Name is required",
                     pattern: {
                       value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
-                      message: (
-                        <Text>
-                          Name must start with capital letter, special character
-                          is allowed <br /> but optional and it must not end
-                          with an hyphen
-                        </Text>
-                      ),
+                      message: <Text>Name must start with capital letter</Text>,
                     },
                   })}
                   placeholder="First Name"
-                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  w={{ base: `17rem`, lg: `14.5625rem` }}
                   h={{ base: `2.5625rem` }}
-                  
                 />
 
                 <span
@@ -216,17 +208,11 @@ const Register = () => {
                     required: "Last Name is required",
                     pattern: {
                       value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
-                      message: (
-                        <Text>
-                          Name must start with capital letter, special character
-                          is allowed <br /> but optional and it must not end
-                          with an hyphen
-                        </Text>
-                      ),
+                      message: <Text>Name must start with capital letter</Text>,
                     },
                   })}
                   placeholder="Last Name"
-                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  w={{ base: `17rem`, lg: `14.5625rem` }}
                   h={{ base: `2.5625rem` }}
                 />
                 <span
@@ -247,7 +233,7 @@ const Register = () => {
               flexDir={{ base: `column`, lg: `row` }}
               justify={`flex-start`}
               align={{ base: `start`, lg: `center` }}
-              gap={{lg:`1.94rem`}}
+              gap={{ lg: `1.94rem` }}
             >
               <Box>
                 <FormLabel
@@ -271,7 +257,7 @@ const Register = () => {
                     },
                   })}
                   placeholder="User type"
-                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  w={{ base: `17rem`, lg: `14.5625rem` }}
                   h={{ base: `2.5625rem` }}
                 />
 
@@ -310,7 +296,7 @@ const Register = () => {
                     },
                   })}
                   placeholder="name@example.com"
-                  w={{base:`17rem`, lg: `14.5625rem` }}
+                  w={{ base: `17rem`, lg: `14.5625rem` }}
                   h={{ base: `2.5625rem` }}
                 />
                 <span
@@ -327,105 +313,24 @@ const Register = () => {
               </Box>
             </Flex>
 
-            {/* <Flex justify={`flex-start`} align={`center`} gap={`1.94rem`}>
-              <Box   mt={{ lg: `-1rem` }}>
-                <FormLabel
-                  fontSize={{ lg: `.875rem` }}
-                  lineHeight={{ lg: `1.375rem` }}
-                  fontWeight={600}
-                
-                  // mb={{ lg: `.5rem` }}
-                  color={`#3E3E3E`}
-                >
-                  Your Phone Number
-                </FormLabel>
-                <Input
-                  type="tel"
-                  name={`phoneNumber`}
-                  {...register("phoneNumber", {
-                    required: "Enter phone number",
-                    pattern: {
-                      value: /^[+]?[(]?[0-9]{1,4}[)]?[-\s\./0-9]*$/,
-                      message: "Phone number must not contain text",
-                    },
-                  })}
-                  placeholder="User type"
-                  w={{ lg: `14.625rem` }}
-                  h={{ lg: `2.5625rem` }}
-                />
-                <span
-                  style={{
-                    color: "red",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    translate: "1rem 1rem",
-                    // margin: ".5rem   1rem",
-                  }}
-                >
-                  {errors?.phoneNumber?.message}
-                </span>
-              </Box>
-
-              <Box>
-                <FormLabel
-                  fontSize={{ lg: `.875rem` }}
-                  lineHeight={{ lg: `1.375rem` }}
-                  fontWeight={600}
-                  mb={{ lg: `.5rem` }}
-                  color={`#3E3E3E`}
-                >
-                  Email
-                </FormLabel>
-                <Input
-                  type="email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[^@]+@[^@]+\.[^@ .]{2,}$/,
-                      message: "Email is not valid.",
-                    },
-                  })}
-                  placeholder="name@example.com"
-                  w={{ lg: `14.625rem` }}
-                  h={{ lg: `2.5625rem` }}
-                />
-                <span
-                  style={{
-                    color: "red",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    margin: "1rem   1rem",
-                  }}
-                >
-                  {errors?.email?.message}
-                </span>
-              </Box>
-            </Flex> */}
-
-            <Box
-           
-           
-            >
+            <Box>
               <Checkbox
                 type="checkbox"
                 {...register("checkbox", {
                   required: "Checkbox section is required",
                   // message: "Checkbox section is required",
                 })}
-
-                // fontSize={{base:`.5rem`, lg: `.75rem` }}
-                // lineHeight={{ lg: `1.375rem` }}
-                // fontWeight={600}
-                // color={`yellow`}
-                fontSize={`.5rem`}
                 className="checkbox"
-
-                
-                
+                whiteSpace={`nowrap`}
               >
-                Send me alerts and weekly newletters
+                <Text
+                  fontSize={{ base: `.75rem`, lg: `.875rem` }}
+                  lineHeight={{ lg: `1.375rem` }}
+                  
+                >
+                  {" "}
+                  Send me alerts and weekly newletters
+                </Text>
               </Checkbox>
               <span
                 style={{
@@ -441,9 +346,8 @@ const Register = () => {
             </Box>
 
             <Button
-              w={{base:`17rem`, lg: `31rem` }}
+              w={{ base: `17rem`, lg: `31rem` }}
               h={{ base: `2.625rem` }}
-              
               bgColor={`blue.100`}
               color={`#fff`}
               display={`flex`}
@@ -468,14 +372,16 @@ const Register = () => {
           align={`center`}
           gap={{ lg: `2rem` }}
           justify={`space-between`}
-          mt={{base:`2.5rem`, lg: `1.94rem` }}
-          mb={{base:`2rem`}}
+          mt={{ base: `2.5rem`, lg: `1.94rem` }}
+          mb={{ base: `2rem` }}
           className="cc-container"
         >
           <Link to={"/"}>
             <Text
               lineHeight={{ lg: `1.8rem` }}
               letterSpacing={{ lg: `.0125rem` }}
+              fontSize={{ base: `.875rem`, lg: `1rem` }}
+              fontWeight={600}
             >
               &copy; {new Date().getFullYear()} TechStudio Academy
             </Text>
@@ -494,7 +400,12 @@ const Register = () => {
                 href="https://twitter.com/techstudioacdmy"
                 className="text-white cc-link-hover"
               >
-                <Icon icon={`fa:twitter`} />
+                <Box
+                  as={Icon}
+                  w={{ base: `15px`, lg: `24px` }}
+                  h={{ base: `15px`, lg: `24px` }}
+                  icon={`fa:twitter`}
+                />
               </a>
             </li>
             <li>
@@ -503,7 +414,12 @@ const Register = () => {
                 href="https://facebook.com/techstudioacademy"
                 className="text-white cc-link-hover "
               >
-                <Icon icon={`fa:facebook`} />
+                <Box
+                  as={Icon}
+                  w={{ base: `15px`, lg: `24px` }}
+                  h={{ base: `15px`, lg: `24px` }}
+                  icon={`fa:facebook`}
+                />
               </a>
             </li>
             <li>
@@ -512,7 +428,12 @@ const Register = () => {
                 href="https://instagram.com/techstudioacademy"
                 className="text-white cc-link-hover "
               >
-                <Icon icon={`fa:instagram`} />
+                <Box
+                  as={Icon}
+                  w={{ base: `15px`, lg: `24px` }}
+                  h={{ base: `15px`, lg: `24px` }}
+                  icon={`fa:instagram`}
+                />
               </a>
             </li>
 
@@ -522,7 +443,12 @@ const Register = () => {
                 href="https://linkedin.com/company/tech-studio-academy"
                 className="text-white cc-link-hover "
               >
-                <Icon icon={`fa:linkedin`} />
+                <Box
+                  as={Icon}
+                  w={{ base: `15px`, lg: `24px` }}
+                  h={{ base: `15px`, lg: `24px` }}
+                  icon={`fa:linkedin`}
+                />
               </a>
             </li>
           </ul>

@@ -10,62 +10,130 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Icon } from "@iconify/react";
-;
-
 const Card = (props) => {
   return (
     <Box>
       <Box className="cc-container">
         <Grid
-          templateColumns={{base:`repeat(1,1fr)`, lg:`repeat(3,auto)`}}
+          templateColumns={{ base: `repeat(1,1fr)`, lg: `repeat(3,auto)` }}
           justifyContent={`center`}
           alignItems={`center`}
           pos={`relative`}
-          gap={{base:`2rem`, lg: `3.06rem` }}
+          gap={{ base: `2rem`, lg: `3.06rem` }}
           className={props.className}
         >
-          <GridItem display={{base:`none`, lg:`block`}}>
+          <GridItem display={{ base: `none`, lg: `block` }}>
             <Image
               src={props.img}
               pos={`absolute`}
               left={props.left}
               top={props.top}
-              
             />
           </GridItem>
 
-          <GridItem >
-            <Text as={`span`} >{props.caption}</Text>
-            <Heading fontSize={{base:`.875rem`}}mt={{base:`1rem`}} >{props.heading}</Heading>
+          <GridItem>
+            <Text as={`span`}>{props.caption}</Text>
+            <Heading
+              fontSize={{ base: `.875rem`, lg: `2.0625rem` }}
+              fontWeight={700}
+              lineHeight={{lg:`2.5075rem`}}
+              letterSpacing={`.00625rem`}
+              mt={{ base: `1rem` }}
+            >
+              {props.heading}
+            </Heading>
             <Text
-              fontSize={{base:`.75rem`, lg: `.875rem` }}
-              lineHeight={{base:`1.2rem`, lg: `1.75rem` }}
+              fontSize={{ base: `.75rem`, lg: `.875rem` }}
+              lineHeight={{ base: `1.2rem`, lg: `1.75rem` }}
               letterSpacing={{ lg: `.00625rem` }}
               // border={`1px solid red`}
-              mr={{base:`2rem`, lg: `4rem` }}
-              mt={{base:`1rem`}}
+              mr={{ base: `2rem`, lg: `4rem` }}
+              mt={{ base: `1rem` }}
             >
               {props.desc}
             </Text>
 
-            <Box mt={{base:`1rem`}}>
+            <Box
+              mt={{ base: `1rem` }}
+              display={`grid`}
+              gridTemplateColumns={{
+                base: `repeat(2,1fr)`,
+                lg: `repeat(3,1fr)`,
+              }}
+              gap={`1rem`}
+            >
               <Button
                 display={`flex`}
                 alignItems={`center`}
-                fontSize={{base:`.75rem`, lg:`1rem`}}
-                justifyContent={`center`}
-                gap={`1rem`}
-                w={{base:`10rem`, lg: ` 14.86438rem` }}
-                h={{base:`2.5rem`, lg: `5rem`}}
-                p={{base: `1rem 0.9875rem 1rem 1rem` }}
-                borderRadius={{ lg: `.4375rem` }}
-                mt={{lg:`1.57rem`}}
+                fontSize={{ base: `.75rem`, lg: `1rem` }}
+                justifyContent={`flex-start`}
+                gap={{ base: `1rem`, lg: `1rem` }}
+                w={{ base: `12rem`, lg: ` 14.86438rem` }}
+                h={{ base: `2.5rem`, lg: `5rem` }}
+                p={{ base: `.4rem`, lg: `1rem 0.9875rem 1rem 1rem` }}
+                borderRadius={{ base: `.4375rem` }}
+                mt={{ lg: `1.57rem` }}
+                bgColor={props.bgColor}
+                color={props.color}
               >
-                <Icon icon="skill-icons:vscode-light"  width={{base:`70px`}}/>
+                <Box
+                  as={Icon}
+                  icon="skill-icons:vscode-light"
+                  w={{ base: `30px`, lg: `70px` }}
+                  h={{ base: `30px`, lg: `70px` }}
+                />
                 Visual Studio Code
               </Button>
-              {/* <Button></Button>
-              <Button></Button> */}
+
+              <Button
+                display={props.display}
+                alignItems={`center`}
+                fontSize={{ base: `.75rem`, lg: `1rem` }}
+                justifyContent={`flex-start`}
+                gap={`1rem`}
+                w={props.width}
+                h={props.height}
+                p={{ base: `.4rem`, lg: `1rem 0.9875rem 1rem 1rem` }}
+                borderRadius={{ base: `.4375rem` }}
+                mt={{ lg: `1.57rem` }}
+                bgColor={props.bgColor}
+                color={props.color}
+              >
+                <Box
+                  as={Icon}
+                  icon={props.icon}
+                  w={{ base: `30px`, lg: `35.36px` }}
+                  h={{ base: `30px`, lg: `49.98px` }}
+                />
+                {props.btn}
+              </Button>
+
+              <Button
+                display={props.display1}
+                alignItems={`center`}
+                fontSize={{ base: `.75rem`, lg: `1rem` }}
+                justifyContent={`flex`}
+                gap={`1rem`}
+                w={props.width1}
+                h={props.height1}
+                p={{ base: `.4rem`, lg: `1rem 0.9875rem 1rem 1rem` }}
+                borderRadius={{ base: `.4375rem` }}
+                mt={{ lg: `1.57rem` }}
+                bgColor={props.bgColor}
+                color={props.color}
+                // mr={{lg:`9rem`}}
+                pos={`relative`}
+                left={{ lg: `-7rem` }}
+                // border={`1px solid red`}
+              >
+                <Box
+                  as={Icon}
+                  icon={props.icon1}
+                  w={{ base: `30px`, lg: `49px` }}
+                  h={{ base: `30px`, lg: `49px` }}
+                />
+                {props.button}
+              </Button>
             </Box>
             {/* </Box> */}
           </GridItem>

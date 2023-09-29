@@ -1,11 +1,13 @@
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
     <Box as="section">
       <Box className="cc-container"
-      mt={{lg:`8.8rem`}}
+      mt={{base:`5rem`, lg:`8.8rem`}}
+      mb={{base:`4rem`}}
       >
         <Box
           w={{ lg: `75.6875rem` }}
@@ -40,6 +42,8 @@ const Banner = () => {
             mastering the art of creating captivating websites and engaging
             landing pages.
           </Text>
+
+          <Link to={`/register`}>
           <Button
           fontSize={{base:`.875rem`, lg:`1rem`}}
             w={{base:`15rem`, lg: `16.1875rem` }}
@@ -56,6 +60,9 @@ const Banner = () => {
           >
             Begin Registration Now
           </Button>
+
+          </Link>
+          
         </Box>
       </Box>
     </Box>

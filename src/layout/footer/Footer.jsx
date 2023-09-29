@@ -17,18 +17,18 @@ const Footer = () => {
   return (
     <Box
       bgColor={`blue.300`}
-      h={{ lg: `26.5625rem` }}
-      pt={{ lg: `4rem` }}
-      pb={{ lg: `3.5rem` }}
+      h={{base:`auto`, lg: `26.5625rem` }}
+      pt={{base:`2.5rem`, lg: `4rem` }}
+      pb={{base:`2rem`, lg: `3.5rem` }}
     >
       <Box
         className="cc-container"
         borderBottom={`1px solid #fff`}
-        pb={{ lg: `3.69rem` }}
+        pb={{base:`1.5rem`, lg: `3.69rem` }}
       >
         <Grid
-          templateColumns={`repeat(4, 1fr)`}
-          fontSize={{ lg: `.875rem` }}
+          templateColumns={{base:`repeat(1, 1fr)`,lg:`repeat(4, 1fr)`}}
+          fontSize={{ base: `.875rem` }}
           color={`#fff`}
           // alignItems={`center`}
           // justifyContent={`start`}
@@ -36,39 +36,51 @@ const Footer = () => {
           <GridItem>
             <Image
               src="https://res.cloudinary.com/dkszgtapy/image/upload/v1686218525/techstudio-web-app/assets/images/logo_white_text_new_2_fmjlzq.png"
-              //   alt=""
-              //   style={{ width: `200px`, height: `200px`, objectFit: `contain` }}
+              
             />
-            <Text mt={{ lg: `1.14rem` }}>
+            <Text 
+            mt={{base:`1rem`, lg: `1.14rem` }}
+            mr={{base:`2rem`, lg:`0`}}
+            
+            >
               1, Ogunlesi Street, Awoyokun Bus Stop, Onipanu, Lagos.
             </Text>
           </GridItem>
 
           <GridItem>
-            <Heading color={`#fff`} fontSize={{ lg: `1rem` }}>
+            <Heading 
+            color={`#fff`} 
+            fontSize={{ lg: `1rem` }}
+            mt={{base:`2rem`, lg:`0`}}
+            >
               Courses
             </Heading>
-            <Text mt={{ lg: `1.14rem` }}>Front End Development</Text>
-            <Text my={{ lg: `.75rem` }}>Android Development</Text>
+            <Text mt={{base:`1rem`, lg: `1.14rem` }}>Front End Development</Text>
+            <Text my={{ base: `.75rem` }}>Android Development</Text>
             <Text>UI/UX Design</Text>
-            <Text my={{ lg: `.75rem` }}>Full Stack Development</Text>
+            <Text my={{ base: `.75rem` }}>Full Stack Development</Text>
             <Text>Data Science</Text>
           </GridItem>
           <GridItem>
-            <Heading color={`#fff`} fontSize={{ lg: `1rem` }}>
+            <Heading 
+            color={`#fff`} 
+            fontSize={{ lg: `1rem` }}
+            mt={{base:`2rem`, lg:`0`}}
+            >
               About Us
             </Heading>
-            <Text my={{ lg: `.75rem` }}>Blog</Text>
+            <Text my={{ base: `.75rem` }}>Blog</Text>
             <Text>Partnership</Text>
-            <Text my={{ lg: `.75rem` }}>FAQs</Text>
+            <Text my={{ base: `.75rem` }}>FAQs</Text>
             <Text>Privacy Policy</Text>
-            <Text my={{ lg: `.75rem` }}>Contact Us</Text>
+            <Text my={{ base: `.75rem` }}>Contact Us</Text>
           </GridItem>
           <GridItem>
             <Heading
               color={`#fff`}
               fontSize={{ lg: `1rem` }}
               mb={{ lg: `.88rem` }}
+              mt={{base:`2rem`, lg:`0`}}
             >
               Subscribe to our newsletter
             </Heading>
@@ -79,11 +91,11 @@ const Footer = () => {
                 display={`flex`}
                 justifyContent={`center`}
                 alignItems={`center`}
-                p={{ lg: `0.625rem 0.6875rem` }}
+                p={{ base: `0.625rem 0.6875rem` }}
                 gap={{ lg: `7.3125rem` }}
-                borderRadius={{ lg: `.3125rem` }}
+                borderRadius={{ base: `.3125rem` }}
                 bgColor={`#fff`}
-                h={{ lg: `3rem` }}
+                h={{base:`2.5rem`, lg: `3rem` }}
               />
               <Button
                 disabled
@@ -93,14 +105,14 @@ const Footer = () => {
                 bgColor={`#0266F4`}
                 color={`#fff`}
                 // w={{lg:`6.625rem`}}
-                h={{ lg: `1.75rem` }}
-                fontSize={{ lg: `.75rem` }}
+                h={{base:`2rem`, lg: `1.75rem` }}
+                fontSize={{ base: `.75rem` }}
                 lineHeight={{ lg: `1.125rem` }}
                 borderRadius={`none`}
                 border={`none`}
                 pos={`absolute`}
-                top={{ lg: `.8rem` }}
-                right={{ lg: `1.2rem` }}
+                top={{ base:`.3rem`, lg: `.8rem` }}
+                right={{ base:`.4rem`, lg: `1.2rem` }}
               >
                 Subscribe
                 <Icon
@@ -119,11 +131,12 @@ const Footer = () => {
       </Box>
 
       <Flex
+      flexDir={{base:`column`, lg:`row`}}
         color={`#fff`}
         align={`center`}
-        gap={{ lg: `2rem` }}
+        gap={{base:`1rem`, lg: `2rem` }}
         justify={`flex-end`}
-        mt={{ lg: `1.94rem` }}
+        mt={{base:`1rem`, lg: `1.94rem` }}
         className="cc-container"
       >
         <Text lineHeight={{ lg: `1.8rem` }} letterSpacing={{ lg: `.0125rem` }}>
@@ -143,7 +156,7 @@ const Footer = () => {
               href="https://twitter.com/techstudioacdmy"
               className="text-white cc-link-hover"
             >
-              <Icon icon={`fa:twitter`} className="fs-xl" />
+              <Icon icon={`fa:twitter`}  />
             </a>
           </li>
           <li className="">
@@ -152,7 +165,7 @@ const Footer = () => {
               href="https://facebook.com/techstudioacademy"
               className="text-white cc-link-hover "
             >
-              <Icon icon={`fa:facebook`} className="fs-xl" />
+              <Icon icon={`fa:facebook`} />
             </a>
           </li>
           <li className="">
@@ -161,7 +174,7 @@ const Footer = () => {
               href="https://instagram.com/techstudioacademy"
               className="text-white cc-link-hover "
             >
-              <Icon icon={`fa:instagram`} className="fs-xl" />
+              <Icon icon={`fa:instagram`} />
             </a>
           </li>
 
@@ -171,7 +184,7 @@ const Footer = () => {
               href="https://linkedin.com/company/tech-studio-academy"
               className="text-white cc-link-hover "
             >
-              <Icon icon={`fa:linkedin`} className="fs-xl" />
+              <Icon icon={`fa:linkedin`} />
             </a>
           </li>
         </ul>

@@ -11,7 +11,7 @@ const HeroSection = () => {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
 
-  const  baseUrl= 'https://api.techstudio.academy/api/v1/facebookAd'
+  const baseUrl = "https://api.techstudio.academy/api/v1/facebookAd";
 
   const {
     register,
@@ -65,59 +65,28 @@ const HeroSection = () => {
               Register to learn more about the program pricing and curriculum
             </p>
             <div className="form-user">
-            
-              <div className="form-user_name">
-                <span
-                  style={{
-                    color: "red",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    translate: ".5rem .1rem",
-                    whiteSpace:"nowrap",
-                    fontSize:`.75rem`
-                  }}
-                >
-                  {errors?.firstName?.message}
-                </span>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="text"
-                  id="firstName"
-                  name="firstName"
-                  {...register("firstName", {
-                    required: "First Name is required",
-                    pattern: {
-                      value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
-                      message: (
-                        <Text>
-                          Name must start with capital letter, special character
-                          is allowed <br /> but optional and it must not end
-                          with an hyphen
-                        </Text>
-                      ),
-                    },
-                  })}
-                />
-               
-              </div>
-
               <div>
-              <span
-                  style={{
-                    color: "red",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    translate: ".5rem .1rem",
-                    whiteSpace:"nowrap",
-                    textAlign:"start",
-                    fontSize:`.75rem`
-                  }}
-                >
-                  {errors?.lastName?.message}
-                </span>
+              <input
+                type="text"
+                placeholder="First Name"
+                className="text"
+                id="firstName"
+                name="firstName"
+                {...register("firstName", {
+                  required: "First Name is required",
+                  pattern: {
+                    value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
+                    message:
+                      "Name must start with capital letter"
+                  },
+                })}
+              />
+              {errors.firstName && (
+                <span className="errorMsg">{errors.firstName.message}</span>
+              )}
+              </div>
+              
+              <div>
                 <input
                   type="text"
                   placeholder="Last Name"
@@ -128,35 +97,19 @@ const HeroSection = () => {
                     required: "Last Name is required",
                     pattern: {
                       value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
-                      message: (
-                        <Text>
-                          Name must start with capital letter, special character
-                          is allowed <br /> but optional and it must not end
-                          with an hyphen
-                        </Text>
-                      ),
+                      message:
+                        "Name must start with capital letter"
                     },
                   })}
                 />
-                
+                {errors.lastName && (
+                  <span className="errorMsg">{errors.lastName.message}</span>
+                )}
               </div>
             </div>
 
             <div>
               <div>
-              <span
-                  style={{
-                    color: "red",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    translate: ".5rem 1rem",
-                    whiteSpace:"nowrap",
-                    fontSize:`.75rem`
-                  }}
-                >
-                  {errors?.email?.message}
-                </span>
                 <input
                   type="email"
                   name="email"
@@ -170,26 +123,13 @@ const HeroSection = () => {
                     },
                   })}
                 />
-                
+                {errors.email && (
+                  <span className="errorMsg">{errors.email.message}</span>
+                )}
               </div>
             </div>
 
             <div>
-              <div>
-              <span
-                  style={{
-                    color: "red",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    translate: ".5rem .1rem",
-                    whiteSpace:"nowrap",
-                    fontSize:`.75rem`
-                    // margin: ".5rem   1rem",
-                  }}
-                >
-                  {errors?.phoneNumber?.message}
-                </span>
                 <input
                   type="tel"
                   placeholder="Phone Number"
@@ -203,7 +143,10 @@ const HeroSection = () => {
                     },
                   })}
                 />
-                
+                <div>
+                {errors.phoneNumber && (
+                  <span className="errorMsg">{errors.phoneNumber.message}</span>
+                )}
               </div>
             </div>
 
@@ -211,7 +154,7 @@ const HeroSection = () => {
               type={`submit`}
               isLoading={isLoading}
               loadingText="Registering..."
-              _hover={{bgColor: `blue.300`, opacity:1}}
+              _hover={{ bgColor: `blue.300`, opacity: 1 }}
               className="button"
             >
               Get Program Package
@@ -236,10 +179,6 @@ const HeroSection = () => {
       />
 
       <CourseBanner />
-
-
-
-
     </section>
   );
 };

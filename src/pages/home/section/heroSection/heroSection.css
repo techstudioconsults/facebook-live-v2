@@ -37,26 +37,16 @@
 
 .form-control {
   width: 28.5625rem;
-  height: 24.25rem;
-  display: inline-flex;
+  height: auto;
+  display: flex;
   padding: 1.81rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.68rem;
   border-radius: 0.9375rem;
   background: #fff;
  
 }
 
-.form-control::before {
-    width: 29.1875rem;
-    height: 24.1875rem;
-    /* flex-shrink: 0; */
-    border-radius: 0.625rem;
-    background: #072c5b;
-    position: absolute;
-    top: -2rem;
-  }
 
 .form-control p {
   color: #292929;
@@ -73,7 +63,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1.62rem;
+  /* margin-bottom: 1.31rem; */
+  gap: 1.94rem;
   
  
 }
@@ -82,11 +73,9 @@
 
 .form-control form input {
   display: flex;
-  /* padding: 1.0625rem 5.625rem 1.0625rem 0.9375rem; */
   text-indent: .8rem;
   justify-content: center;
   align-items: center;
-  gap: 0.625rem;
   border-radius: 0.3125rem;
   border: 1px solid #bababa;
 }
@@ -96,20 +85,16 @@
   height: 2.5rem;
 }
 
-.email {
-  margin-block: 1.31rem;
-}
+
 
 
 .email ,
 .tel  {
   width: 24.375rem;
   height: 2.5rem;
+  margin-top: 1.31rem;
+  }
   
-  
-}
-
-
 .form-control .button {
   display: flex;
   width: 24.375rem;
@@ -118,14 +103,25 @@
   font-size: 1.05956rem;
   font-weight: 700;
   line-height: 1.47419rem;
-  padding: 0.84375rem 6.5rem;
   justify-content: center;
   align-items: center;
-  gap: 0.625rem;
   border-radius: 0.3125rem;
   background:  #0266f4;
   margin-top: 1.69rem;
 }
+
+form .errorMsg {
+ 
+  color: red;
+  font-size: .75rem;
+  justify-content:start;
+align-items: center;
+
+white-space:nowrap;
+
+}
+
+
 
 @media screen and (max-width: 400px) {
 .hero_section {
@@ -164,8 +160,7 @@
 
   .form-control {
     width: 100%;
-    height: 24.25rem;
-    height: 18rem;
+    height: auto;
     display: inline-flex;
     padding: 1rem;
     flex-direction: column;
@@ -173,16 +168,13 @@
     gap: 1.68rem;
     border-radius: 0.9375rem;
     background: #fff;
-    position: relative;
-    /* padding-bottom: 3rem; */
   }
 
   .form-control p {
     font-size: 1rem;
     line-height: 1.2rem;
     width: 300px;
-    border: 1px solid red;
-    /* white-space: nowrap; */
+    
     
     
    
