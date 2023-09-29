@@ -20,7 +20,7 @@ const Card = (props) => {
           alignItems={`center`}
           pos={`relative`}
           gap={{ base: `2rem`, lg: `3.06rem` }}
-          className={props.className}
+          className={` cc-container ${props.className}`}
         >
           <GridItem display={{ base: `none`, lg: `block` }}>
             <Image
@@ -41,7 +41,10 @@ const Card = (props) => {
               mt={{ base: `1rem` }}
             >
               {props.heading}
-            </Heading>
+             </Heading>
+             <GridItem display={{base:`block`, lg:`none`}}>
+            <Image src={props.image} className="cc-container"/>
+          </GridItem> 
             <Text
               fontSize={{ base: `.75rem`, lg: `.875rem` }}
               lineHeight={{ base: `1.2rem`, lg: `1.75rem` }}
@@ -75,6 +78,7 @@ const Card = (props) => {
                 mt={{ lg: `1.57rem` }}
                 bgColor={props.bgColor}
                 color={props.color}
+                _hover={`none`}
               >
                 <Box
                   as={Icon}
@@ -98,6 +102,7 @@ const Card = (props) => {
                 mt={{ lg: `1.57rem` }}
                 bgColor={props.bgColor}
                 color={props.color}
+                _hover={`none`}
               >
                 <Box
                   as={Icon}
@@ -124,6 +129,7 @@ const Card = (props) => {
                 // mr={{lg:`9rem`}}
                 pos={`relative`}
                 left={{ lg: `-7rem` }}
+                _hover={`none`}
                 // border={`1px solid red`}
               >
                 <Box
@@ -138,7 +144,9 @@ const Card = (props) => {
             {/* </Box> */}
           </GridItem>
 
-          <GridItem>
+          <GridItem 
+          display={{base:`none`, lg:`block`}}
+          >
             <Image src={props.image} />
           </GridItem>
         </Grid>

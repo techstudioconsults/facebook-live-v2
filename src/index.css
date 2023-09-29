@@ -71,6 +71,8 @@ h3 {
   }
   .html
    {
+    
+    
     margin-top: 1.5rem;
   }
 
@@ -80,6 +82,7 @@ h3 {
   .design,
   .git {
     padding-top: 1.5rem;
+    padding-left: 2rem;
   }
 
 .checkbox {

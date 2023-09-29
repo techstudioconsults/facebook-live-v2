@@ -10,6 +10,7 @@ const Description = () => {
       <Box
         // color={`#1E1E1E`}
         className="html"
+        py={{ base: `2rem`, lg: `0rem` }}
       >
         <Card
           img={blue_ellipse}
@@ -26,7 +27,11 @@ const Description = () => {
         />
       </Box>
 
-      <Box bgColor={`#DCE9FA`} className="HTML" py={{ lg: `2rem` }}>
+      <Box
+        bgColor={`#DCE9FA`}
+        className="HTML"
+        py={{ base: `2rem`, lg: `2rem` }}
+      >
         <Card
           display={`flex`}
           display1={`none`}
@@ -44,7 +49,7 @@ const Description = () => {
         />
       </Box>
 
-      <Box className="css" py={{ lg: `3rem` }}>
+      <Box className="css" py={{ base: `2rem`, lg: `3rem` }}>
         <Card
           img={blue_ellipse}
           left={`-1rem`}
@@ -68,7 +73,7 @@ const Description = () => {
         bgColor={`blue.300`}
         color={`#fff`}
         className="bootstrap"
-        py={{ lg: `3rem` }}
+        py={{ base: `2rem`, lg: `3rem` }}
       >
         <Card
           img={orange_ellipse}
@@ -87,7 +92,7 @@ const Description = () => {
         />
       </Box>
 
-      <Box className="design">
+      <Box className="design" py={{ base: `2rem`, lg: `3rem` }}>
         <Card
           img={blue_ellipse}
           left={`-1rem`}
@@ -107,7 +112,7 @@ const Description = () => {
         className="git"
         bgColor={`#DCE9FA`}
         color={`blue.300`}
-        py={{ lg: `3rem` }}
+        py={{ base: `2rem`, lg: `3rem` }}
       >
         <Card
           img={orange_ellipse}
@@ -132,7 +137,7 @@ const Description = () => {
       <Box
         // color={`#1E1E1E`}
         className="html"
-        py={{ lg: `3rem` }}
+        py={{ base: `2rem`, lg: `3rem` }}
       >
         <Card
           img={blue_ellipse}

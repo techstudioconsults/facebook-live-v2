@@ -4,7 +4,7 @@ import "./audience.css"; // Import the CSS file with the correct casing
 const Audience = () => {
   return (
     <section className="audience-section"> 
-      <h2>Our Target Audience</h2>
+      <h2>Who is this course for</h2>
 
       <div className="audience-container cc-container"> 
         {/* Audience Card 1 */}

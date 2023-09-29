@@ -5,8 +5,8 @@ const CourseBanner = () => {
   return (
     <Box
     // display={{base:`none`, lg:`block`}}
-      w={{ lg: `67.75rem` }}
-      h={{base:`13rem`, lg: `9.64135rem` }}
+      w={{base:`375px`, lg: `67.75rem` }}
+      h={{base:`20rem`, lg: `9.64135rem` }}
       m={`0 auto`}
       bgColor={`#fff`}
       p={{base:`1.5rem 5.4375rem 1.8rem 5.4375rem`, lg: `1.375rem 7.4375rem 1.39138rem 7.4375rem` }}
@@ -16,7 +16,7 @@ const CourseBanner = () => {
       mt={{base:`6rem`, lg: `4.19rem` }}
      
     >
-      <Flex justify={{base:`center`, lg:`flex-start`}} align={{base:`center`, lg:`flex-start`}}>
+      <Flex justify={{base:`center`, lg:`flex-start`}} align={{base:`flex-start`, lg:`flex-start`}}>
         <Text
          fontSize={{ lg: `.78175rem` }}
          fontWeight={700}
@@ -24,15 +24,17 @@ const CourseBanner = () => {
          letterSpacing={{ lg: `.0065rem` }}
         >Enrolment Details</Text>
       </Flex>
-      <Flex flexDir={{base:`column`, lg:`row`}} justify={{base:`center`, lg:`space-between`}} align={`center`}>
+      <Flex flexDir={{base:`column`, lg:`row`}} justify={{base:`center`, lg:`space-between`}} align={{base:`flex-start`, lg:`center`}}>
         <Box>
           <Heading
             color={`blue.200`}
-            fontFamily={`Arial`}
-            fontSize={{ lg: `2.0625rem` }}
+           
+            fontSize={{base:`24px`, lg: `2.0625rem` }}
             fontWeight={700}
             lineHeight={{base:`1.5rem`, lg: `2.61356rem` }}
             letterSpacing={{ base: `.0065rem` }}
+            whiteSpace={`nowrap`}
+            marginBlock={{base:`1rem`, lg:`0`}}
           >
             June 14th, 2023
           </Heading>
@@ -41,6 +43,7 @@ const CourseBanner = () => {
             fontWeight={700}
             lineHeight={{ lg: `1.59606rem` }}
             letterSpacing={{ lg: `.0065rem` }}
+            textAlign={{base:`center`}}
           >
             Start Date
           </Text>
@@ -49,11 +52,12 @@ const CourseBanner = () => {
         <Box>
           <Heading
             color={`blue.200`}
-            fontFamily={`Arial`}
-            fontSize={{ lg: `2.0625rem` }}
+           
+            fontSize={{base:`24px`, lg: `2.0625rem` }}
             fontWeight={700}
             lineHeight={{ lg: `2.61356rem` }}
             letterSpacing={{ lg: `.0065rem` }}
+            marginBlock={{base:`1rem`, lg:`0`}}
           >
             Zoom (Online)
           </Heading>
@@ -62,6 +66,7 @@ const CourseBanner = () => {
             fontWeight={700}
             lineHeight={{ lg: `1.59606rem` }}
             letterSpacing={{ lg: `.0065rem` }}
+            textAlign={{base:`center`}}
           >
             Location
           </Text>
@@ -69,12 +74,16 @@ const CourseBanner = () => {
 
         <Box>
           <Heading
-            fontFamily={`Arial`}
+            
             color={`blue.200`}
-            fontSize={{ lg: `2.0625rem` }}
+            fontSize={{base:`24px`, lg: `2.0625rem` }}
             fontWeight={700}
             lineHeight={{ lg: `2.61356rem` }}
             letterSpacing={{ lg: `.0065rem` }}
+            marginBlock={{base:`1rem`, lg:`0`}}
+            // textAlign={{base:`center`}}
+            // disolay={{base:`grid`, lg:`block`}}
+            // placeItems={{base:`center`}}
           >
             100K
           </Heading>
@@ -83,6 +92,8 @@ const CourseBanner = () => {
             fontWeight={700}
             lineHeight={{ lg: `1.59606rem` }}
             letterSpacing={{ lg: `.0065rem` }}
+            textAlign={{base:`center`}}
+        
           >
             {" "}
             Fee

@@ -68,7 +68,7 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
         <Box>
           <Text
             onClick={toggleItem}
-            fontSize={{ base: `.875rem`, lg: `1.6875rem` }}
+            fontSize={{ base: `.875rem`, lg: `1.25rem` }}
             lineHeight={{ lg: ` 3.005rem` }}
             color={`#1E1E1E`}
             mb={{ base: `1rem`, lg: `2rem` }}
@@ -81,18 +81,20 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
         <Box onClick={toggleItem}>
           {isOpen ? (
             <Box
-              as={Icon}
-              w={{ base: `20px`, lg: `30px` }}
-              h={{ base: `20px`, lg: `30px` }}
-              icon="fe:arrow-down"
-            />
+            as={Icon}
+            w={{ base: `20px`, lg: `30px` }}
+            h={{ base: `20px`, lg: `30px` }}
+            icon="fe:arrow-up"
+          />
+
           ) : (
+           
             <Box
-              as={Icon}
-              w={{ base: `20px`, lg: `30px` }}
-              h={{ base: `20px`, lg: `30px` }}
-              icon="fe:arrow-up"
-            />
+            as={Icon}
+            w={{ base: `20px`, lg: `30px` }}
+            h={{ base: `20px`, lg: `30px` }}
+            icon="fe:arrow-down"
+          />
           )}
         </Box>
       </Flex>
@@ -102,7 +104,7 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
         <Box>
           {typeof content === "string" ? (
             <Text
-              fontSize={{ base: `.875rem` }}
+              fontSize={{ base: `.875rem`, lg:`1.25rem` }}
               mt={{ base: `-1rem`, lg: `-1.5rem` }}
               mb={{ base: `.5rem` }}
               w={{ base: `280px`, lg: `800px` }}
@@ -112,7 +114,7 @@ const AccordionItem = ({ title, content, isOpen, toggleItem }) => {
           ) : (
             <Box
               as={`ul`}
-              fontSize={{ base: `.75rem` }}
+              fontSize={{ base: `.875rem`, lg:`1.25rem` }}
               style={{ listStyle: `none`, marginTop: `-1.5rem` }}
             >
               {Object.values(content).map((value, index) => (
