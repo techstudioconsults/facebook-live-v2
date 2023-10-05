@@ -36,7 +36,7 @@ const CourseBanner = () => {
             whiteSpace={`nowrap`}
             marginBlock={{base:`1rem`, lg:`0`}}
           >
-            June 14th, 2023
+            Nov. 6th, 2023
           </Heading>
           <Text
             fontSize={{ lg: `.78175rem` }}
