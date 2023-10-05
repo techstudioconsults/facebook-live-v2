@@ -41,7 +41,7 @@
   align-items: flex-start;
   border-radius: 0.9375rem;
   background: #fff;
-  margin-right: 4rem;
+  margin-right: 4.5rem;
   /* position: relative;
   z-index: 1000; */
 }
@@ -54,7 +54,7 @@
   position: absolute;
   top: 11rem;
   /* right: 6rem; */
-  left: 66%;
+  left: 65.25%;
   border-radius: 8px;
   z-index: -1;
 }
