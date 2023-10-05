@@ -41,7 +41,7 @@ const Description = () => {
           left={`-1rem`}
           top={`1.2rem`}
           caption="UNIT 2"
-          heading="HTML"
+          heading="Introduction To HTML"
           desc="HTML (Hypertext Markup Language) is a core technology for creating web pages and is an essential component of web development. Students will learn how to use HTML to structure the content of a web page, including text, images, links, and more. Some topics covered here are HTML Elements, Document Structure, Semantic Markup, Links and Anchors, Images, Tables and Forms, and HTML Attributes."
           image="https://res.cloudinary.com/dkszgtapy/image/upload/v1695723770/HTML_lurzpg.gif"
           btn="HTML"
@@ -62,7 +62,7 @@ const Description = () => {
           left={`-1rem`}
           top={`-.2rem`}
           caption="UNIT 3 "
-          heading="CSS"
+          heading="Introduction To CSS"
           desc="CSS (Cascading Style Sheets) is a technology used to control the visual style of a web page. Students will learn how to use CSS to control the layout, colors, fonts, and other visual aspects of a web page. Topics covered here includes CSS Selectors, Box Model, Display and Positioning, Colors and Backgrounds, Typography, CSS Grid and Flexbox, and Media QueriesBootstrap is a popular CSS framework that helps with responsive and mobile-first websites. Students learn how to use the Bootstrap framework to rapidly develop and style web pages. Here, we cover Grid System, UI Components, CSS Utilities, Customization, and Responsive Design."
           image="https://res.cloudinary.com/dkszgtapy/image/upload/v1695724281/css-document-file_tleehx.gif"
           btn="CSS"
@@ -89,7 +89,7 @@ const Description = () => {
           left={`-1rem`}
           top={`1.2rem`}
           caption="UNIT 4"
-          heading="Bootstrap"
+          heading="Introduction To Bootstrap"
           desc="Bootstrap is a popular CSS framework that helps with responsive and mobile-first websites. Students learn how to use the Bootstrap framework to rapidly develop and style web pages. Here, we cover Grid System, UI Components, CSS Utilities, Customization, and Responsive Design."
           image="https://res.cloudinary.com/dkszgtapy/image/upload/v1695724446/bootstrap_ycl7ae.gif"
           display={`flex`}

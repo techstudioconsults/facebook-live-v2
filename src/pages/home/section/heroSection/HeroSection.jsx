@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import "./heroSection.css";
-import { Button } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 import RegistrationModal from "../../../../component/Modal";
 import CourseBanner from "../../../../component/CourseBanner";
 
@@ -11,7 +11,9 @@ const HeroSection = () => {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
 
-  const baseUrl = "https://express.techstudio.academy/api/v1/facebookAd";
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
+  
 
   const {
     register,
@@ -80,8 +82,10 @@ const HeroSection = () => {
                   required: "First Name is required",
                   pattern: {
                     value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
-                    message:
-                      "Name must start with capital letter"
+                    message: (
+                        <Text as={`span`} className="errorMsg">Name must start with <br/> capital letter</Text>
+                    )
+                       
                   },
                 })}
               />
@@ -101,8 +105,10 @@ const HeroSection = () => {
                     required: "Last Name is required",
                     pattern: {
                       value: /^[A-Z][a-zA-Z '.-]*[A-Za-z][^-]$/,
-                      message:
-                        "Name must start with capital letter"
+                      message: (
+                        <Text as={`span`} className="errorMsg">Name must start with <br/> capital letter</Text>
+                    )
+                        
                     },
                   })}
                 />
@@ -143,7 +149,9 @@ const HeroSection = () => {
                     required: "Enter phone number",
                     pattern: {
                       value: /^[+]?[(]?[0-9]{1,4}[)]?[-\s\./0-9]*$/,
-                      message: "Phone number must not contain text",
+                      message: (
+                        <Text as={`span`} className="errorMsg">Phone number must not contain text</Text>
+                      )
                     },
                   })}
                 />
@@ -157,7 +165,7 @@ const HeroSection = () => {
             <Button
               type={`submit`}
               isLoading={isLoading}
-              loadingText="Registering..."
+              loadingText="Getting Package..."
               _hover={{ bgColor: `blue.300`, opacity: 1 }}
               className="button"
             >
@@ -172,6 +180,8 @@ const HeroSection = () => {
         onClose={handleSuccessModalClose}
         isSuccess={true}
         isError={false}
+        heading={`Package Sent !!.`}
+        text={`You will receive the curriculum in your email shortly`}
       />
 
       {/* Error Modal */}

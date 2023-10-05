@@ -6,41 +6,57 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
-  
+  Heading,
 } from '@chakra-ui/react';
-import accordionData  from '../../utils/Content.js';
-
+import accordionData from '../../utils/Content.js';
 
 const Faqs = () => {
+  const renderAccordionContent = (content) => {
+    if (typeof content === 'string') {
+      return content;
+    } else if (typeof content === 'object') {
+      return Object.keys(content).map((key) => (
+        <div key={key}>{content[key]}</div>
+      ));
+    }
+    return null; // Handle other types of content if needed
+  };
+
   return (
-    <Box className="cc-container" mt={{base:`3rem`, lg:`4rem`}}>
-      <Accordion defaultIndex={[0]} allowMultiple >
-        {accordionData.map((item, id) => (
-          <AccordionItem key={id}>
+    <Box className="cc-container" mt={{ base: '3rem', lg: '4rem' }}>
+      <Heading
+        fontSize={{ base: `1rem`,lg:`2.25rem` }}
+        textAlign={`center`}
+        fontWeight={600}         mb={{ base: `2rem`, lg: `4.31rem` }}
+         mt={{ base: `4rem`, lg: `8.8rem` }}
+      >         Web Development FAQs
+       </Heading>
+      <Accordion defaultIndex={[0]} allowMultiple>
+        {accordionData.map((item) => (
+          <AccordionItem key={item.id}>
             <h2>
               <AccordionButton>
-                <Box 
-                as="span" flex="1" 
-                textAlign="left"
-                fontSize={{ base:`12.5px`, lg: `1.25rem`}}
-                p={{lg:`16px 20px`}}
-                ml={{base:`-1rem`, lg:`0`}}
-                
+                <Box
+                  as="span"
+                  flex="1"
+                  textAlign="left"
+                  fontSize={{ base: '12.5px', lg: '1.25rem' }}
+                  p={{ lg: '16px 20px' }}
+                  ml={{ base: '-1rem', lg: '0' }}
                 >
                   {item.title}
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4} 
-            textAlign="start"
-           
-            
-             fontSize={{base:`12.5px`,lg: `1.25rem`}}
-             p={{lg:`16px 20px`}}
-             ml={{base:`-1rem`, lg:`1rem`}}
+            <AccordionPanel
+              pb={4}
+              textAlign="start"
+              fontSize={{ base: '12.5px', lg: '1.25rem' }}
+              p={{ lg: '16px 20px' }}
+              ml={{ base: '-1rem', lg: '1rem' }}
             >
-              {item.content}
+              {renderAccordionContent(item.content)}
             </AccordionPanel>
           </AccordionItem>
         ))}
@@ -50,6 +66,7 @@ const Faqs = () => {
 };
 
 export default Faqs;
+
 
 
 {/* <AccordionItem>

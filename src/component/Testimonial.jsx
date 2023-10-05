@@ -1,71 +1,49 @@
-import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { Pagination } from 'swiper'
-import { Swiper } from 'swiper/react'
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/bundle';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
-import 'swiper/css/pagination'
-
-import 'swiper/swiper.min.css'
-
-const TestimonialBanner = ({ children, title }) => {
-  const swiperRef = React.useRef(null)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (swiperRef.current && swiperRef.current.swiper) {
-        swiperRef.current.swiper.slideNext()
-      }
-    }, 7000)
-
-    return () => clearInterval(interval)
-  }, [])
-
+const Testimonials = () => {
   return (
-   
-      <div
-        className={`w-100 position-relative bg-blue border-radius-lg py-10 p-lg-10 px-10 testimonialBanner`}
-      >
-       
-          <img
-            className='position-absolute top-0 start-0 my-10 mx-16 d-none d-lg-block spin'
-            src='https://res.cloudinary.com/kingsleysolomon/image/upload/v1667476114/samples/techstudio/Icons%20and%20Images/Icons%20and%20Images/Tech%20Studio%20images/Repeat_Grid_38_ipl0tv.png'
-            alt='img'
-          />
-       
+    <Swiper
+      spaceBetween={20}
+      slidesPerView={1}
+      loop={true}
+      navigation={false} // Add navigation arrows
+      pagination={{ dynamicBullets: true, }}
+      autoplay={{ delay: 5000 }} // Add pagination dots
+    >
+      <SwiperSlide>
+        <div className="testimonial">
+           <img
+            src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1667476114/samples/techstudio/Icons%20and%20Images/Icons%20and%20Images/Tech%20Studio%20images/Repeat_Grid_38_ipl0tv.png'"
+            alt="Testimonial 1"
+          /> 
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Integer sed posuere orci. Suspendisse potenti."
+          </p>
+          <h3>John Doe</h3>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="testimonial">
+           <img
+            src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1667476113/samples/techstudio/Icons%20and%20Images/Icons%20and%20Images/Tech%20Studio%20images/Rectangle_7475_gijnxw.png"
+            alt="Testimonial 2"
+          /> 
+          <p>
+            "Vivamus eu ipsum vel arcu vestibulum fringilla. Proin
+            tristique rhoncus quam, at lacinia elit vestibulum
+            viverra."
+          </p>
+          <h3>Jane Smith</h3>
+        </div>
+      </SwiperSlide>
+      {/* Add more slides as needed */}
+    </Swiper>
+  );
+};
 
-        <h3 className='fw-semibold text-center text-white'>{title}</h3>
-        <Swiper
-          ref={swiperRef}
-          loop={true}
-          spaceBetween={300}
-          slidesPerView={1}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          modules={[Pagination]}
-          // onSlideChange={handleSlideChange}
-        >
-          {children}
-        </Swiper>
-       
-          <img
-            className='position-absolute bottom-0 end-0 my-10 mx-16 d-none d-lg-block spin-reverse'
-            src='https://res.cloudinary.com/kingsleysolomon/image/upload/v1667476113/samples/techstudio/Icons%20and%20Images/Icons%20and%20Images/Tech%20Studio%20images/Rectangle_7475_gijnxw.png'
-            alt='img'
-          />
-       
-      </div>
-   
-  )
-}
-
-TestimonialBanner.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
-}
-
-export default TestimonialBanner
+export default Testimonials;

@@ -22,11 +22,11 @@
     {
         id: 5,
         title: "How does the online class work? ",
-        // content: {
-        //     a: "Participate in live classes, typically held 3x a week, (2-3  hours per session). ",
-        //     b:"Join a WhatsApp group to interact with fellow students. ",
-        //     c:"Connect with your tutor as needed"
-        // }
+        content: {
+            a: "Participate in live classes, typically held 3x a week, (2-3  hours per session). ",
+            b:"Join a WhatsApp group to interact with fellow students. ",
+            c:"Connect with your tutor as needed"
+        }
     },
     {
         id: 6,

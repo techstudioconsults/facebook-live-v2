@@ -14,7 +14,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .hero_section-header {
@@ -33,8 +32,6 @@
   letter-spacing: 0.02rem;
 }
 
-
-
 .form-control {
   width: 28.5625rem;
   height: auto;
@@ -47,21 +44,20 @@
   margin-right: 4rem;
   /* position: relative;
   z-index: 1000; */
- 
 }
 
 .before::before {
   content: "";
-    width: 24.5625rem;
-    height: 350px;
-    background-color: hsl(214, 85%, 19%);
-    position: absolute;
-    top: 11rem;
-    right: 8.7rem;
-    border-radius: 8px;
-    z-index: -1
+  width: 24.5625rem;
+  height: 350px;
+  background-color: hsl(214, 85%, 19%);
+  position: absolute;
+  top: 11rem;
+  /* right: 6rem; */
+  left: 66%;
+  border-radius: 8px;
+  z-index: -1;
 }
-
 
 .form-control p {
   color: #292929;
@@ -70,8 +66,6 @@
   line-height: 1.47419rem;
   letter-spacing: 0.01063rem;
   margin-bottom: 1.69rem;
- 
- 
 }
 
 .form-user {
@@ -80,36 +74,29 @@
   align-items: center;
   /* margin-bottom: 1.31rem; */
   gap: 1.94rem;
-  
- 
 }
-
-
 
 .form-control form input {
   display: flex;
-  text-indent: .8rem;
+  text-indent: 0.8rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.3125rem;
   border: 1px solid #bababa;
 }
 
-.text  {
+.text {
   width: 11.375rem;
   height: 2.5rem;
 }
 
-
-
-
-.email ,
-.tel  {
+.email,
+.tel {
   width: 24.375rem;
   height: 2.5rem;
   margin-top: 1.31rem;
-  }
-  
+}
+
 .form-control .button {
   display: flex;
   width: 24.375rem;
@@ -121,27 +108,23 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.3125rem;
-  background:  #0266f4;
+  background: #0266f4;
   margin-top: 1.69rem;
 }
 
 form .errorMsg {
- 
-  color: red;
-  font-size: .75rem;
-  justify-content:start;
-align-items: center;
+  color: #ff0000;
+  font-size: 0.75rem;
+  justify-content: start;
+  align-items: center;
 
-white-space:nowrap;
-
+  white-space: nowrap;
 }
 
-
-
-@media screen and (max-width: 400px) {
-.hero_section {
-  padding-top: 18rem;
-}
+@media screen and (max-width: 600px) {
+  .hero_section {
+    padding-top: 18rem;
+  }
 
   .hero_section-content {
     flex-direction: column;
@@ -163,11 +146,10 @@ white-space:nowrap;
     font-size: 1.5rem;
     margin-right: 2rem;
     margin-bottom: 1rem;
-   
   }
 
   .hero_section-header p {
-    font-size: .75rem;
+    font-size: 0.75rem;
     letter-spacing: 0.01rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
@@ -190,44 +172,43 @@ white-space:nowrap;
     font-size: 1rem;
     line-height: 1.2rem;
     width: 300px;
-    
-    
-    
-   
   }
 
-  .text  {
+  .form-user {
+    gap: 1.5rem;
+  }
+
+  .text {
     width: 9rem;
     height: 2rem;
   }
-  
-  
-  .email ,
-  .tel  {
+
+  .email,
+  .tel {
     width: 19.5rem;
     height: 2rem;
-    
   }
 
   .form-control .button {
     display: flex;
     width: 19.5rem;
     height: 2.1875rem;
-    
+
     margin-top: 1.31rem;
-   
-   
   }
 
   .before {
-  display: none; 
+    display: none;
   }
-  
-  
-  
-  
+
+  form .errorMsg {
+    color: #ff0000;
+    font-size: 0.75rem;
+    justify-content: start;
+    align-items: center;
+    
+    /* width: 50px; */
+
+    /* white-space: wrap; */
+  }
 }
-
-
-
-

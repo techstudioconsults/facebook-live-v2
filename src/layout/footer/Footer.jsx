@@ -47,7 +47,9 @@ const Footer = () => {
             </Text>
           </GridItem>
 
-          <GridItem>
+          <GridItem
+          _hover={{color:`orange`}}
+          >
             <Heading 
             color={`#fff`} 
             fontSize={{ lg: `1rem` }}
@@ -61,11 +63,14 @@ const Footer = () => {
             <Text my={{ base: `.75rem` }}>Full Stack Development</Text>
             <Text>Data Science</Text>
           </GridItem>
-          <GridItem>
+          <GridItem 
+           _hover={{color:`orange`}}
+          >
             <Heading 
             color={`#fff`} 
             fontSize={{ lg: `1rem` }}
             mt={{base:`2rem`, lg:`0`}}
+            
             >
               About Us
             </Heading>

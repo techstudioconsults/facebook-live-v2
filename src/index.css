@@ -22,12 +22,6 @@
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-
-  /* padding-left: 6.25rem;
-  padding-right: 6.25rem;
-  padding-top: 4.34rem;
-  padding-bottom: 4.28rem; */
- 
 }
 
 h2, h3 {
@@ -67,10 +61,22 @@ h3 {
   color:#1F2666 ;
 } */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1024px) {
   .cc-container {
 
-    max-width: 350px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    
+   
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cc-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 100%;
     margin: 0 auto;
     

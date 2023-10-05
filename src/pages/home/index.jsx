@@ -7,7 +7,7 @@ import Description from "./section/Description"
 import BannerII from "./section/BannerII"
 import Faqs from "./Faqs"
 import Layout from "../../layout/Layout"
-// import TestimonialBanner from "../../component/Testimonial"
+// import Testimonials from "../../component/Testimonial"
 
 
 const Home = () => {
@@ -18,9 +18,9 @@ const Home = () => {
          <Course />
          <Banner />
          <Description />
+         {/* <Testimonials /> */}
          <Faqs />
          <BannerII />
-         {/* <TestimonialBanner /> */}
      </Layout>
    )
  }
