@@ -55,6 +55,7 @@ const Faqs = () => {
               fontSize={{ base: '12.5px', lg: '1.25rem' }}
               p={{ lg: '16px 20px' }}
               ml={{ base: '-1rem', lg: '1rem' }}
+              fontWeight={500}
             >
               {renderAccordionContent(item.content)}
             </AccordionPanel>

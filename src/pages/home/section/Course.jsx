@@ -16,11 +16,21 @@ const Course = () => {
     <Box
       as="section"
       bgColor={`rgba(220, 233, 250, 0.30)`}
-      mt={{ lg: `8.86rem` }}
-      pb={{base:`3rem`, lg: `4.32rem` }}
+      mt={{ base: `5rem`,
+      //  md: `8rem`, 
+      //  lg: `10.86rem`,
+       }}
+      pb={{ base: `3rem`, lg: `4.32rem` }}
+      //  border={`1px solid red`}
     >
       <Box className="cc-container">
-        <Heading as={`h2`} textAlign={`center`} pt={{base:`2rem`, lg: `4.34rem` }} fontSize={{base:`1rem`, lg:`2.25rem`}}>
+        <Heading
+          as={`h2`}
+          textAlign={`center`}
+          pt={{ base: `2rem`, lg: `4.34rem` }}
+          fontSize={{ base: `1rem`, lg: `2.25rem` }}
+         
+        >
           Why Choose This Course
         </Heading>
 
@@ -28,6 +38,8 @@ const Course = () => {
           templateColumns={{ base: `repeat(1,1fr)`, lg: `repeat(1, 1fr)` }}
           justifyItems={`center`}
           alignItems={`center`}
+          // mb={{ lg: `15.06rem` }}
+         
         >
           <GridItem>
             <Flex

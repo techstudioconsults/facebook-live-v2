@@ -11,7 +11,10 @@ import github from "../../../assets/icons/github.svg";
 
 const Description = () => {
   return (
-    <Box>
+    <Box 
+    mt={{lg:`12.81rem`}}
+    
+    >
       <Box color={`#1E1E1E`} className="html" py={{ base: `2rem`, lg: `3rem` }}>
         <Card
           img={blue_ellipse}
