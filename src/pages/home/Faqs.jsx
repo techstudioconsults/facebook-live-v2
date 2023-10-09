@@ -31,7 +31,10 @@ const Faqs = () => {
          mt={{ base: `4rem`, lg: `8.8rem` }}
       >         Web Development FAQs
        </Heading>
-      <Accordion defaultIndex={[0]} allowMultiple>
+      <Accordion
+      //  defaultIndex={[0]} 
+       allowMultiple
+       >
         {accordionData.map((item) => (
           <AccordionItem key={item.id}>
             <h2>

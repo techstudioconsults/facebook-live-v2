@@ -118,6 +118,7 @@ const Footer = () => {
                 pos={`absolute`}
                 top={{ base:`.3rem`, lg: `.8rem` }}
                 right={{ base:`.4rem`, lg: `1.2rem` }}
+                _hover={{background:`blue.300`}}
               >
                 Subscribe
                 <Icon

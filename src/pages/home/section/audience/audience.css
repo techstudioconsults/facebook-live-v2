@@ -63,6 +63,12 @@
     align-items: center;
     gap: 2rem; /* Added gap for spacing between cards */
   }
+
+  .audience-card h3 {
+   
+    margin-bottom: 1.12rem;
+    margin-top: 3rem;
+  }
 }
 
 
